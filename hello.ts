@@ -13,4 +13,10 @@ const ada: Person = {
     lastName: "Lovelace"
 };
 
+async function logSiteText() {
+    const site = await fetch("https://www.deno.com");
+    console.log(await site.text());
+}
+
 console.log(sayHello(ada));
+logSiteText();
